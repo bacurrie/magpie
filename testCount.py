@@ -18,11 +18,16 @@ def chewFeed(name):
     SCROLL_PAUSE_TIME = 1
 
     count = driver.find_element_by_xpath(".//*[@class='ais-Panel-body']").text
-    print(count)
-    feed = driver.find_element_by_xpath(".//*[@class='feed']")
-    feedCount = driver.find_elements_by_xpath(".//*[@class='feed']/div").count
-    print(feedCount)
-
+    count_value = count.split()
+    count_int = int(count_value[0])
+    print(count_int)
+    feedCount = 0
+    while feedCount != count_int:
+            
+        feed = driver.find_element_by_xpath(".//*[@class='feed']")
+        feedCount = len(driver.find_elements_by_xpath(".//*[@class='feed']/div"))
+        print(feedCount)
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 designerLst = args.list
 designerLst = [name.replace(" ", "-").lower().split(",") for name in designerLst]

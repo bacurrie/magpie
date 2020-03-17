@@ -12,33 +12,31 @@ parser.add_argument('-l', '--list', nargs='+', type=str, help='<Required> set fl
 args = parser.parse_args()
 driver = webdriver.Firefox()
 f = open('out.txt','w')
+
 def chewFeed(name):
     url = "https://www.grailed.com/designers/"+name
     driver.get(url)
     SCROLL_PAUSE_TIME = 1
 
-    # Get scroll height
-    last_height = driver.execute_script("return document.body.scrollHeight")
-    #TODO see if can get count of flex items in div, scroll until all are visible...
-        #compare to total num of listings in designer cat.
-    while True:
-        # Scroll down to bottom
+    count = driver.find_element_by_xpath(".//*[@class='ais-Panel-body']").text
+    count_value = count.split()
+    count_int = int(count_value[0])
+    print(count_int)
+    feedCount = 0
+    
+    while feedCount != count_int:
+            
+        feed = driver.find_element_by_xpath(".//*[@class='feed']")
+        feedCount = len(driver.find_elements_by_xpath(".//*[@class='feed']/div"))
+        print(feedCount)
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-        # Wait to load page
-        time.sleep(SCROLL_PAUSE_TIME)
-
-        # Calculate new scroll height and compare with last scroll height
-        new_height = driver.execute_script("return document.body.scrollHeight")
-        if new_height == last_height:
-            break
-        last_height = new_height
-
     feed = driver.find_element_by_xpath(".//*[@class='feed']")
-    #source = feed.get_attribute("outerHTML")
     source = driver.page_source
     soup = BeautifulSoup(source, 'lxml')
     f.write(source)
+    #TODO use beautifulsoup to parse feedItems into json
+        #TODO store name, brand, size, and price (category?)
 
 designerLst = args.list
 designerLst = [name.replace(" ", "-").lower().split(",") for name in designerLst]
