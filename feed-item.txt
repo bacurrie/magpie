@@ -1,0 +1,73 @@
+<div class="feed-item">
+
+    <a href="/listings/12683240-archival-clothing-x-maharishi-x-military-maharishi-military-archive-program-bomber-jacket" rel="noopener noreferrer" target="_blank">
+        <div class="listing-cover-photo">
+            <img 
+                alt="Maharishi Military Archival Clothing Maharishi Military Archive Program Bomber Jacket" 
+                src="https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:320,width:240/output=quality:70/compress/https://cdn.fs.grailed.com/api/file/stIPN2Qbu3qTHJnJQ7Tw" 
+                srcset="https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:320,width:240/output=quality:70/compress/https://cdn.fs.grailed.com/api/file/stIPN2Qbu3qTHJnJQ7Tw 1x, https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:640,width:480/output=quality:70/compress/https://cdn.fs.grailed.com/api/file/stIPN2Qbu3qTHJnJQ7Tw 2x, https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:960,width:720/output=quality:70/compress/https://cdn.fs.grailed.com/api/file/stIPN2Qbu3qTHJnJQ7Tw 3x"
+            />
+            <div class="hug-bottom"></div>
+        </div>
+
+        <p class="listing-age sub-title">
+            <span class="date-ago">about 1 hour ago</span>
+            <span class="bumped date-ago">
+                <span class="strike-through">
+                    <span>(2 months)</span>
+                </span>
+            </span>
+        </p>
+        
+        <div class="listing-metadata">
+            <div class="listing-designer-and-size">
+                <p class="listing-designer truncate">Archival Clothing × Maharishi × Military</p>
+                <p class="listing-size sub-title">l</p>
+            </div>
+
+            <div>
+                <p class="truncate listing-title">Maharishi Military Archive Program Bomber Jacket</p>
+            </div>
+        </div>    
+    </a>
+
+    <div class="listing-price-and-heart">
+        
+        <div class="listing-price">
+            
+            <p class="sub-title new-price">
+                <span>$210</span>
+            </p>
+
+            <p class="sub-title original-price strike-through">
+                <span>$400</span>
+            </p>
+
+        </div>
+        
+        <button class="heart-follow" id="fr12683240" title="Add to Favorites" type="button">
+            
+            <svg class="heart unfilled" height="10px" version="1.1" viewbox="0 0 10.5 10" width="15px" xmlns="http://www.w3.org/2000/svg">
+                
+                <title>Heart_Icon</title>
+                
+                <defs>
+                    <path d="M7.52159454,0.5 C6.87059454,0.5 6.21959454,0.761 5.72359454,1.283 L5.06059454,1.996 L4.37359454,1.283 C3.88859454,0.761 3.24359454,0.5 2.59559454,0.5 C1.94759454,0.5 1.29659454,0.761 0.799594538,1.283 C-0.313405462,2.463 -0.313405462,4.385 0.799594538,5.564 L5.06059454,10.091 L9.32159454,5.564 C10.4345945,4.384 10.4345945,2.462 9.32159454,1.283 C8.85481678,0.785551159 8.20374655,0.502335608 7.52159454,0.5 Z">\
+                    </path>
+                </defs>
+                
+                <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+                    
+                    <g title="Heart_Icon">
+                        <path d="M5.06059455,9.36148812 L8.95786578,5.22092364 C9.88914659,4.2335819 9.88914659,2.61258143 8.95697938,1.62513417 C8.58431004,1.22797743 8.06450397,1.00186179 7.51988261,0.999997069 L7.52159454,1 C6.98780875,1 6.47416032,1.2189665 6.08975342,1.62348154 L5.0670503,2.72331158 L4.70053724,2.34292758 L4.00729778,1.6233332 C3.63052695,1.21781902 3.12499487,1 2.59559454,1 C2.06452686,1 1.55070042,1.21922141 1.1633233,1.62607636 C0.232042489,2.6134181 0.232042489,4.23441857 1.16368273,5.22130511 L5.06059455,9.36148812 Z" stroke-width="1"></path>
+                    </g>
+
+                </g>
+
+            </svg>
+
+        </button>
+
+    </div>
+
+</div>
