@@ -1,6 +1,13 @@
 from bs4 import BeautifulSoup
+import pymongo
+from pymongo import MongoClient
+import datetime
+import pprint
 
 soup = BeautifulSoup(open('out.txt', 'r', encoding='utf-8'), 'lxml')
+client = MongoClient('localhost', 27017)
+db = client.test_database
+listings = db.listings
 
 # NEED attributes:
 # name
@@ -31,13 +38,22 @@ for tag in soup.find_all("div", {"class": "feed-item"}):
     print(designer.string)
     print(size.string)
 
+    listing = { "name": title.string,
+                "designer": designer.string,
+                "size": size.string}
+    
     if ogPrice == None:
-        print("was: " + oldPrice.string)
-        print("now: " + newPrice.string)
+        listing["original price"] = oldPrice.string
+        listing["current price"] = newPrice.string
     else:
-        print(ogPrice.string)
+        listing["price"] = ogPrice.string
     if origin == None:
-        print("posted " + bump.string)
+        listing["listed"] = bump.string
     else:
-        print("bumped " + bump.string)
-        print("listed " + origin.string)
+        listing["bumped"] = bump.string
+        listing["listed"] = origin.string
+
+    listings.insert_one(listing)
+
+    #Count the amount of bumps over time thru incrementing value in listing
+    #armount of time between bumps
